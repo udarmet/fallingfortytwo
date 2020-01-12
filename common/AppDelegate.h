@@ -16,11 +16,6 @@ public:
     virtual bool applicationDidFinishLaunching();
     virtual void applicationDidEnterBackground();
     virtual void applicationWillEnterForeground();
-
-    static constexpr char APP_NAME[] = "Falling Forty-two";
-    static constexpr float DESIGN_RESOLUTION_WIDTH = 320;
-    static constexpr float DESIGN_RESOLUTION_HEIGHT = 480;
-    static constexpr float FRAMERATE = 60;
 };
 
 
