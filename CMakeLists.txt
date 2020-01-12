@@ -44,11 +44,11 @@ set(GAME_RES_FOLDER "${CMAKE_CURRENT_SOURCE_DIR}/assets")
 # add cross-platforms source files and header files 
 list(APPEND GAME_SOURCE
      common/AppDelegate.cpp
-     common/HelloWorldScene.cpp
+     common/GameScene.cpp
      )
 list(APPEND GAME_HEADER
      common/AppDelegate.h
-     common/HelloWorldScene.h
+     common/GameScene.h
      )
 
 if(ANDROID)
