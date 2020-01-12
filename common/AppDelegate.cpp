@@ -9,10 +9,9 @@ using namespace cocos2d;
 using namespace CocosDenshion;
 
 
-static constexpr char APP_NAME[] = "Falling Forty-two";
-static constexpr float DESIGN_RESOLUTION_WIDTH = 320;
-static constexpr float DESIGN_RESOLUTION_HEIGHT = 480;
-static constexpr float FRAMERATE = 60;
+static const char APP_NAME[] = "Falling Forty-two";
+static const Size DESIGN_RESOLUTION_SIZE = {320, 480};
+static const float FRAMERATE = 60;
 
 
 AppDelegate::AppDelegate()
@@ -41,7 +40,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     if (!glview)
     {
 #if CC_TARGET_PLATFORM == CC_PLATFORM_LINUX
-        glview = GLViewImpl::createWithRect(APP_NAME, cocos2d::Rect(0, 0, DESIGN_RESOLUTION_WIDTH, DESIGN_RESOLUTION_HEIGHT));
+        glview = GLViewImpl::createWithRect(APP_NAME, cocos2d::Rect(0, 0, DESIGN_RESOLUTION_SIZE.width, DESIGN_RESOLUTION_SIZE.height));
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
         glview = GLViewImpl::create(APP_NAME);
 #endif
@@ -55,13 +54,13 @@ bool AppDelegate::applicationDidFinishLaunching()
     // Set the design resolution
     auto frameSize = glview->getFrameSize();
     float ratio = frameSize.width / frameSize.height;
-    if (ratio > DESIGN_RESOLUTION_WIDTH / DESIGN_RESOLUTION_HEIGHT)
+    if (ratio > DESIGN_RESOLUTION_SIZE.width / DESIGN_RESOLUTION_SIZE.height)
     {
-        glview->setDesignResolutionSize(DESIGN_RESOLUTION_HEIGHT * ratio, DESIGN_RESOLUTION_HEIGHT, ResolutionPolicy::EXACT_FIT);
+        glview->setDesignResolutionSize(DESIGN_RESOLUTION_SIZE.height * ratio, DESIGN_RESOLUTION_SIZE.height, ResolutionPolicy::EXACT_FIT);
     }
     else
     {
-        glview->setDesignResolutionSize(DESIGN_RESOLUTION_WIDTH, DESIGN_RESOLUTION_WIDTH / ratio, ResolutionPolicy::EXACT_FIT);
+        glview->setDesignResolutionSize(DESIGN_RESOLUTION_SIZE.width, DESIGN_RESOLUTION_SIZE.width / ratio, ResolutionPolicy::EXACT_FIT);
     }
 
     // create a scene. it's an autorelease object

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>textureFileName</key>
+            <string>chalk-line3.png</string>
+        </dict>
+        <key>frames</key>
+        <dict>
+            <key>chalk-line3/00</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{1688,176}</string>
+                <key>spriteSourceSize</key>
+                <string>{1688,176}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{1688,176}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>chalk-line3/01</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{1688,176}</string>
+                <key>spriteSourceSize</key>
+                <string>{1688,176}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{1688,179}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>chalk-line3/02</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{1688,176}</string>
+                <key>spriteSourceSize</key>
+                <string>{1688,176}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{1688,357}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+        </dict>
+    </dict>
+</plist>
+
+
