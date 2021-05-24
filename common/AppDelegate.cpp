@@ -1,12 +1,11 @@
 #include "AppDelegate.h"
 
-#include <audio/include/SimpleAudioEngine.h>
+#include "audio/include/AudioEngine.h"
 
 #include "GameScene.h"
 
 
 using namespace cocos2d;
-using namespace CocosDenshion;
 
 
 static const char APP_NAME[] = "Falling Forty-two";
@@ -21,7 +20,7 @@ AppDelegate::AppDelegate()
 
 AppDelegate::~AppDelegate() 
 {
-    SimpleAudioEngine::end();
+    AudioEngine::end();
 }
 
 
@@ -74,15 +73,13 @@ bool AppDelegate::applicationDidFinishLaunching()
 void AppDelegate::applicationDidEnterBackground()
 {
     Director::getInstance()->stopAnimation();
-    SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
-    SimpleAudioEngine::getInstance()->pauseAllEffects();
+    AudioEngine::pauseAll();
 }
 
 
 void AppDelegate::applicationWillEnterForeground()
 {
     Director::getInstance()->startAnimation();
-    SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
-    SimpleAudioEngine::getInstance()->resumeAllEffects();
+    AudioEngine::resumeAll();
 }
 
